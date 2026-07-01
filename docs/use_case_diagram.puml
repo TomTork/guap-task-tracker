@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+title Task Tracker - Use Case Diagram
+
+skinparam usecase {
+  BackgroundColor<<future>> LightGray
+  BorderColor<<future>> LightGray
+}
+
+actor User
+
+package "User Service" {
+  User --> (Create user)
+  User --> (Get user by ID)
+  
+  (Authorization) <<future>>
+  (Roles) <<future>>
+}
+
+package "Task Service" {
+  User --> (Create task)
+  User --> (Get list of own tasks)
+  User --> (Delegate task to another user)
+  
+  (Comments) <<future>>
+  (Attachments) <<future>>
+  (Deadlines) <<future>>
+  (Tags) <<future>>
+  (Projects) <<future>>
+  (Teams) <<future>>
+  (Search tasks) <<future>>
+  (Change history) <<future>>
+  (Notifications) <<future>>
+  (Task priority) <<future>>
+}
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+title User Service - ER Diagram
+
+entity "User" as user {
+  *id : BIGINT <<PK>>
+  --
+  first_name : VARCHAR
+  last_name : VARCHAR
+  *email : VARCHAR <<UNIQUE>>
+}
+
+@enduml

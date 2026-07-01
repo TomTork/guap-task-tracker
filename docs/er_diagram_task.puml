@@ -1,0 +1,17 @@
+@startuml
+title Task Service - ER Diagram
+
+entity "Task" as task {
+  *id : BIGINT <<PK>>
+  --
+  title : VARCHAR
+  status : ENUM
+  creator_id : BIGINT
+  assignee_id : BIGINT
+}
+
+note right of task::status
+  Values: TODO, IN_PROGRESS, DONE
+end note
+
+@enduml
