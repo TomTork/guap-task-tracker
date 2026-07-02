@@ -1,0 +1,40 @@
+name: Verify
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - 'user_service/**'
+      - 'task_service/**'
+
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'user_service/**'
+      - 'task_service/**'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Verify User Service
+        working-directory: user_service
+        run: mvn clean verify
+
+      - name: Verify Task Service
+        working-directory: task_service
+        run: mvn clean verify
