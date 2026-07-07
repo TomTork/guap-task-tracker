@@ -3,7 +3,6 @@ package com.tasktracker.user.service;
 import com.tasktracker.user.Helper;
 import com.tasktracker.user.db.dao.UserRepository;
 import com.tasktracker.user.rest.model.UserDTO;
-import com.tasktracker.user.db.model.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -27,11 +26,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO create(UserDTO userDTO) {
-        return Helper.convert(userRepository.save(Helper.reverse(userDTO)));
+        return Helper.convert(userRepository.save(Helper.convert(userDTO)));
     }
 
     @Override
     public UserDTO update(UserDTO userDTO) {
-        return null;
+        return Helper.convert(userRepository.save(Helper.convert(userDTO)));
     }
 }

@@ -12,7 +12,7 @@ public class Helper {
         userDTO.setEmail(user.getEmail());
         return userDTO;
     }
-    public static User reverse(UserDTO userDTO) {
+    public static User convert(UserDTO userDTO) {
         User user = new User();
         user.setId(userDTO.getId());
         user.setFirst_name(userDTO.getFirst_name());
