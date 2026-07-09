@@ -22,6 +22,11 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public List<TaskDTO> findAllTasksByAssigneeId(Integer id) {
+        return taskRepository.findTasksByAssignee_id(id).stream().map(Helper::convert).collect(Collectors.toList());
+    }
+
+    @Override
     public TaskDTO findById(Integer id) {
         return Helper.convert(taskRepository.findTaskById(id));
     }
