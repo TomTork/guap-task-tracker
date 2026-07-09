@@ -1,0 +1,10 @@
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Настроить CI/CD', 'DONE', 1, 2);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Написать REST API для задач', 'IN_PROGRESS', 1, 1);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Подключить базу данных', 'DONE', 2, 3);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Добавить валидацию входных данных', 'TODO', 2, 4);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Написать unit-тесты', 'TODO', 3, 3);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Провести код-ревью', 'IN_PROGRESS', 4, 1);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Настроить логирование', 'TODO', 4, 5);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Обновить документацию', 'DONE', 5, 2);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Исправить баг с авторизацией', 'IN_PROGRESS', 5, 5);
+INSERT INTO TASKS (title, status, creator_id, assignee_id) VALUES ('Провести нагрузочное тестирование', 'TODO', 1, 4);
