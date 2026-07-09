@@ -22,4 +22,12 @@ class UserController {
     public ResponseEntity<UserDTO> getUserById(@PathVariable Integer id) {
         return ResponseEntity.ok(userService.findById(id));
     }
+    @PostMapping
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok(userService.update(userDTO));
+    }
+    @PutMapping
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok(userService.create(userDTO));
+    }
 }
