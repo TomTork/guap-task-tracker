@@ -5,6 +5,7 @@ import com.tasktracker.user.rest.model.UserDTO;
 
 public class Helper {
     public static UserDTO convert(User user) {
+        if (user == null) return null;
         UserDTO userDTO = new UserDTO();
         userDTO.setId(user.getId());
         userDTO.setFirst_name(user.getFirst_name());
@@ -13,6 +14,7 @@ public class Helper {
         return userDTO;
     }
     public static User convert(UserDTO userDTO) {
+        if (userDTO == null) return null;
         User user = new User();
         user.setId(userDTO.getId());
         user.setFirst_name(userDTO.getFirst_name());

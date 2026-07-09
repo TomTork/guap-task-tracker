@@ -5,6 +5,7 @@ import com.tasktracker.task.rest.model.TaskDTO;
 
 public class Helper {
     public static TaskDTO convert(Task task) {
+        if (task == null) return null;
         TaskDTO taskDTO = new TaskDTO();
         taskDTO.setId(task.getId());
         taskDTO.setTitle(task.getTitle());
@@ -14,6 +15,7 @@ public class Helper {
         return taskDTO;
     }
     public static Task convert(TaskDTO taskDTO) {
+        if (taskDTO == null) return null;
         Task task = new Task();
         task.setId(taskDTO.getId());
         task.setTitle(taskDTO.getTitle());
